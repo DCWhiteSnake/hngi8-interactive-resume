@@ -1,0 +1,119 @@
+<head>
+    <title>David Okeke's Resume</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script hr></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+
+            <h1 style="user-select:none;" id="title" class="title text-center">
+                David Okeke <span class="logo"></span>
+
+            </h1>
+
+        </header>
+        <div class="resume">
+            <div id="intro">
+                Systems engineering undergraduate and software developer with 2+ years of desktop and web development
+                experience. I am interested in practical problem solving and also honing my web development skills.
+            </div>
+
+
+            <div id="experience" class="section">
+                <h4>Experience</h4>
+                <div id="positon"> Software Engineer Intern</div>
+                <div id="company">Intteck Global Systems . Internship</div>
+
+                <div id=responsibility>
+                    Key responsibilities:
+                    <ul>
+                        <li> Monitoring and regular onsite management of databases </li>
+                        <li> Development of custom reports using SAP Crystal Report </li>
+                        <li> Troubleshooting of minor bugs and errors in client packages </li>
+                    </ul>
+                </div>
+
+
+
+                <div id="positon">Summer Intern . Internship</div>
+                <div id="company">Radial Circle Telelcommunications</div>
+            </div>
+
+
+
+
+            <div id="tool" class="section">
+                <h4>Programming Languages and Tooling</h4>
+                <div>
+                    <span>Skills:</span> HTML, CSS, JavaScript, Bootstrap, ASP.NET Core 3 & 2(Razor Pages,
+                    MVC),MSSQL,Entity Framework core, WPF, C#, GitHub, XUnit.
+                </div>
+
+            </div>
+
+            <div id="volunteering" class="section">
+                <h4>Volunteering</h4>
+                <div id="positon">Tutor</div>
+                <div id="company">Engineering Career Expo</div>
+
+                <div id=responsibility>
+                    Responsibility:
+                    I served as a tutor here, teaching the basics of 3D modelling and simulation.
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <h4 id="fancytext-v2"> Have Something to Tell Me?
+            do that here...
+        </h4>
+
+
+        {% if message %}
+        <p class="message">{{message | safe }}</p>
+        {% endif %}
+        <form action="/submit" method="POST" id="survey-form">
+
+
+            <div class="form-group">
+                <label for="name" id="name-label">
+                    Name
+                    <input class="form-control" id="name" type="text" placeholder="Enter your name" name="customer"
+                        required />
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="email-label">
+                    Email
+                    <input class="form-control" id="email" type="email" placeholder="Enter your email" name="email"
+                        required />
+            </div>
+
+
+            <div class="form-group">
+                <p id="desc"></p>
+                <textarea id="comments" class="input-textarea" name="comments"
+                    placeholder="Tell me anything" required></textarea>
+            </div>
+
+            <div class="form-group">
+
+                <input type="submit" value="submit" id="submit-form" class="submit-button" />
+
+        </form>
+
+
+    </div>
+    <footer>
+        
+      Powered by 
+            <img src="../static/hnglogo.png" alt="HNG logo" id = "ingressive" class="logo">
+      
+    </footer>
+
+</body>

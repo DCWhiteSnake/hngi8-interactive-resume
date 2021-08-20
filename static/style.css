@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  /* to take border and padding into account when appling width and height */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400px;
+  line-height: 1.4;
+  padding: 0;
+  margin: 0;
+  color: white;
+  
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+      115deg,
+      rgba(255, 215, 0, 0.9),
+      rgba(0, 0, 255, 0.7)
+    );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.logo {
+  /*link to HNG logo*/
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: 30% 40%;
+  border: none;
+  padding: 0;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+#ingressive{
+  width: 100%;
+  height: 50px;
+}
+@media (max-width: 576px) {
+  #ingressive {
+    height: 1rem;
+  }
+}
+
+#title {
+  font-size: 3em;
+  text-align: center;
+  padding-bottom: 1rem;
+  text-shadow: 5px 5px 10px #000000;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+#title,
+#fancytext-v2 {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+}
+
+*::before,
+*::after {
+  /* to take border and padding into account when appling width and height */
+  box-sizing: border-box;
+}
+
+#fancytext-v2 {
+  font-style: italic;
+  font-family: "Helvetica";
+  font-weight: 200;
+  font-size: 2rem;
+  color: rgb(10, 15, 200);
+  text-shadow: 4px 4px 20px rgb(154, 207, 28);
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  #survey-form {
+    padding: 2.5rem;
+  }
+}
+
+.resume{
+    font-weight: 600;
+}
+
+#survey-form {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(rgba(222, 200, 0, 0.1), rgba(0, 0, 220, 0.4));
+  transition: radial-gradient 1.5s ease-in-out;
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+@media (max-width: 576px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/*form*/
+
+#survey-form:hover {
+  background: radial-gradient(rgba(222, 200, 0, 0.5), rgba(0, 0, 220, 0.4));
+}
+
+.form-group {
+  margin: 0 auto 1rem auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  font-size: 1.5rem;
+  font-family: inherit;
+  width: 100%;
+  height: 3rem;
+  line-height: 2;
+  color: #495057;
+  background-color: white;
+  box-shadow: 0 0 0 0.2rem rgba(233, 233, 233, 0);
+  background-clip: padding-box;
+  border: 1px solid #ced4da00;
+  border-radius: 0.25rem;
+  transition: box-shadow 1.5s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: rgb(231, 132, 51);
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 0.2rem rgba(214, 182, 37, 0.719);
+  background-color: rgba(240, 255, 255, 0.438);
+  color: black;
+}
+
+.form-control:hover {
+  border: 3px solid rgb(120, 120, 180, 0.7);
+  outline: none;
+}
+
+#name-label,
+#number-label,
+#email-label,
+p,
+label {
+  font-size: 1.4rem;
+}
+
+.clue {
+  margin: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4e4;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0.25rem;
+}
+
+.input-textarea:focus {
+  outline: none;
+  background-color: rgba(240, 255, 255, 0.438);
+}
+
+#comments{
+    font-size: 1.5rem;
+}
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+#skill-set,
+#devil-fruit,
+#grade,
+#desc {
+  line-height: 1;
+  margin: 1em auto 0.5em 0;
+  text-align: left;
+}
+
+.submit-button {
+  line-height: inherit;
+  font-size: inherit;
+  border: none;
+  width: 100%;
+  height: 3em;
+  background-color: black;
+  color: white;
+  border-radius: 0.25rem;
+}
+
+.submit-button:hover {
+  background-color: rgb(224, 135, 17);
+  color: black;
+}
